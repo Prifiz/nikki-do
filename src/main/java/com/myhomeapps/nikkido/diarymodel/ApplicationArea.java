@@ -23,4 +23,9 @@ public class ApplicationArea {
     public void setAreaName(String areaName) {
         this.areaName = areaName;
     }
+
+    @Override
+    public String toString() {
+        return this.areaName;
+    }
 }

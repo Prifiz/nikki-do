@@ -9,11 +9,15 @@ import java.util.List;
  */
 public class Thoughts extends AbstractRecordField {
     
-    private int thoughtsId;
     private List<ThoughtsEntry> thoughtsList;
        
     public Thoughts() {
         thoughtsList = new ArrayList<>();
+        displayName = "thoughts";
+    }
+
+    public Thoughts(List<ThoughtsEntry> thoughtsList) {
+        this.thoughtsList = thoughtsList;
         displayName = "thoughts";
     }
     
@@ -31,14 +35,6 @@ public class Thoughts extends AbstractRecordField {
         }
         return stringBuilder.toString();
     }
-    
-    public int getThoughtsId() {
-        return thoughtsId;
-    }
-
-    public void setThoughtsId(int thoughtsId) {
-        this.thoughtsId = thoughtsId;
-    }    
 
     public List<ThoughtsEntry> getThoughtsList() {
         return thoughtsList;

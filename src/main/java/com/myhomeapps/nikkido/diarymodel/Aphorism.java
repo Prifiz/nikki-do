@@ -12,21 +12,12 @@ import org.joda.time.*;
  */
 public class Aphorism extends AbstractRecordField {
     
-    private int aphorismId;
     private DateTime changeDate;
     private String aphorismEntry;
     private int maxLength = 50;
     
     public Aphorism() {
         displayName = "aphorism";
-    }   
-
-    public int getAphorismId() {
-        return aphorismId;
-    }
-
-    public void setAphorismId(int aphorismId) {
-        this.aphorismId = aphorismId;
     }
 
     public DateTime getChangeDate() {
@@ -51,6 +42,11 @@ public class Aphorism extends AbstractRecordField {
 
     public void setMaxLength(int maxLength) {
         this.maxLength = maxLength;
+    }
+
+    @Override
+    public String toString() {
+        return aphorismEntry + "\n";
     }
 
     @Override

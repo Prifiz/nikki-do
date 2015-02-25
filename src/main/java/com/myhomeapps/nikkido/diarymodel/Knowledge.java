@@ -9,11 +9,15 @@ import java.util.List;
  */
 public class Knowledge extends AbstractRecordField {
     
-    private int knowledgeId;
     private List<KnowledgeEntry> knowledgeList;
     
     public Knowledge() {
         knowledgeList = new ArrayList<>();
+        displayName = "knowledge";
+    }
+
+    public Knowledge(List<KnowledgeEntry> knowledgeList) {
+        this.knowledgeList = knowledgeList;
         displayName = "knowledge";
     }
     
@@ -29,14 +33,6 @@ public class Knowledge extends AbstractRecordField {
 
     public void addKnowledgeEntry(KnowledgeEntry knowledgeEntry) {
         knowledgeList.add(knowledgeEntry);
-    }
-    
-    public int getKnowledgeId() {
-        return knowledgeId;
-    }
-
-    public void setKnowledgeId(int knowledgeId) {
-        this.knowledgeId = knowledgeId;
     }
 
     public List<KnowledgeEntry> getKnowledgeList() {

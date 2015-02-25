@@ -7,6 +7,8 @@ package com.myhomeapps.nikkido.controller;
 import com.myhomeapps.nikkido.diarymodel.Aphorism;
 import com.myhomeapps.nikkido.diarymodel.Diary;
 import com.myhomeapps.nikkido.diarymodel.Knowledge;
+import com.myhomeapps.nikkido.storagehandler.DataStorage;
+import com.myhomeapps.nikkido.storagehandler.XMLFileStorage;
 import com.myhomeapps.nikkido.ui.ConsoleView;
 import com.myhomeapps.nikkido.ui.UIConstants;
 import com.myhomeapps.nikkido.ui.UserView;
@@ -35,7 +37,8 @@ public class CommandLineController implements Controller {
 
     @Override
     public void init() {
-        diary = new Diary();
+        DataStorage storage = new XMLFileStorage();
+        diary = storage.load("diary.xml");
         userView = new ConsoleView();
     }
 
@@ -92,7 +95,7 @@ public class CommandLineController implements Controller {
         userView.showAddKnowledgeSourceSubmenu();
         Scanner scanner = new Scanner(System.in);
         String result = "";
-        boolean isCorrect = true;
+        boolean isCorrect = false;
         while (!isCorrect) {
             switch (scanner.nextInt()) {
                 case 1: {
@@ -139,11 +142,11 @@ public class CommandLineController implements Controller {
 
         KnowledgeSource knowledgeSource = new KnowledgeSource();
         knowledgeSource.setType(chooseKnowledgeSourceType());
-        String howToFindSource = scanner.nextLine();
-        if (UIConstants.CANCEL_COMMAND.equals(howToFindSource)) {
-            return;
-        }
-        knowledgeSource.setHowToFind(howToFindSource);
+        //String howToFindSource = scanner.nextLine();
+//        if (UIConstants.CANCEL_COMMAND.equals(howToFindSource)) {
+//            return;
+//        }
+//        //knowledgeSource.setHowToFind(howToFindSource);
         knowledgeEntry.setSource(knowledgeSource);
 
         System.out.println("Enter application area:");
@@ -238,6 +241,12 @@ public class CommandLineController implements Controller {
                 addAphorism((Aphorism) aphorism);
 
                 diary.addRecord(new Record(knowledge, thoughts, aphorism));
+                activateMainMenu();
+                return true;
+            }
+            case UIConstants.SAVE_COMMAND: {
+                DataStorage storage = new XMLFileStorage();
+                storage.save(diary, "diary.xml");
                 activateMainMenu();
                 return true;
             }

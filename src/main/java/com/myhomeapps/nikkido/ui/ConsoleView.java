@@ -18,6 +18,8 @@ public class ConsoleView implements UserView {
         System.out.println(UIConstants.SHOW_ALL_COMMAND);
         System.out.println(UIConstants.ADD_COMMAND);
         System.out.println(UIConstants.REMOVE_ALL_COMMAND);
+        System.out.println(UIConstants.SAVE_COMMAND);
+        System.out.println(UIConstants.SEARCH_COMMAND);
         System.out.println(UIConstants.EXIT_COMMAND);
         System.out.println(UIConstants.line);
     }

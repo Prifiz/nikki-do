@@ -10,10 +10,17 @@ package com.myhomeapps.nikkido.diarymodel;
  */
 public class Record implements Comparable<Record> {
 
+    // TODO
+    // Change similar params to AbstractRecordField... fields
+
     public Record(AbstractRecordField knowledge, AbstractRecordField thoughts, AbstractRecordField aphorism) {
         this.knowledge = knowledge;
         this.thoughts = thoughts;
         this.aphorism = aphorism;
+    }
+
+    public Record() {
+
     }
     private AbstractRecordField knowledge;
     private AbstractRecordField thoughts;
@@ -21,7 +28,7 @@ public class Record implements Comparable<Record> {
 
     @Override
     public String toString() {
-        return knowledge.toString();// + thoughts.toString() + aphorism.toString();
+        return knowledge.toString() + thoughts.toString() + aphorism.toString();
     }
 
     @Override

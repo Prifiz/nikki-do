@@ -22,5 +22,7 @@ public final class UIConstants {
     public static final String REMOVE_ALL_COMMAND = "--removeAll";
     public static final String BACK_TO_MAIN = "--mainMenu";
     public static final String CANCEL_COMMAND = "--cancel";
+    public static final String SAVE_COMMAND = "--save";
+    public static final String SEARCH_COMMAND = "--search";
     public static final String INCORRECT_COMMAND = "Incorrect command. Please, enter again:";
 }
