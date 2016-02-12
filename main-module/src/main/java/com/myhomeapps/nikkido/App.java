@@ -1,10 +1,6 @@
 package com.myhomeapps.nikkido;
 
-import com.myhomeapps.nikkido.Diary;
-import com.myhomeapps.nikkido.Parser;
-import com.myhomeapps.nikkido.Record;
 import com.myhomeapps.nikkido.jaxb.JaxbParser;
-import com.myhomeapps.nikkido.knowledge.AbstractKnowledge;
 import com.myhomeapps.nikkido.knowledge.Area;
 import com.myhomeapps.nikkido.knowledge.Source;
 import com.myhomeapps.nikkido.knowledge.TheoreticalKnowledge;

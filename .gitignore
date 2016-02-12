@@ -1,4 +1,5 @@
 .idea/**
 **/target/**
 **/*.iml
-1.xml
+*.xml
+!pom.xml

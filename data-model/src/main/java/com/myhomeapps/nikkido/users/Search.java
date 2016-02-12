@@ -5,7 +5,7 @@ package com.myhomeapps.nikkido.users;
  */
 public class Search {
 
-    public UsersList findBySubstring(String substring) {
-
-    }
+//    public UsersList findBySubstring(String substring) {
+//
+//    }
 }
