@@ -1,4 +1,4 @@
-package com.myhomeapps.nikkido;
+package com.myhomeapps.nikkido.diary;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;

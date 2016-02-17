@@ -1,9 +1,7 @@
 package com.myhomeapps.nikkido.knowledge;
 
-import com.myhomeapps.nikkido.AbstractRecordElement;
+import com.myhomeapps.nikkido.diary.AbstractRecordElement;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 
 /**

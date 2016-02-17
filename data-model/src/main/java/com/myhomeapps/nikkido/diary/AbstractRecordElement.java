@@ -1,4 +1,4 @@
-package com.myhomeapps.nikkido;
+package com.myhomeapps.nikkido.diary;
 
 import com.myhomeapps.nikkido.knowledge.AbstractKnowledge;
 import com.myhomeapps.nikkido.knowledge.TheoreticalKnowledge;

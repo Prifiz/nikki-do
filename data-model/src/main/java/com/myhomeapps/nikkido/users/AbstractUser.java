@@ -5,7 +5,26 @@ package com.myhomeapps.nikkido.users;
  */
 public abstract class AbstractUser {
     private String login;
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
     private String password;
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public abstract void setCommonInfo(CommonInfo commonInfo);
 
     @Override
     public boolean equals(Object o) {
