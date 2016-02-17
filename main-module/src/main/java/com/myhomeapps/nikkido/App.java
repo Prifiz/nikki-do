@@ -11,7 +11,7 @@ public class App {
     private static final Logger LOGGER = Logger.getLogger(App.class);
 
     public static void main(String[] args) throws Exception {
-        UsersList users = UsersList.getInstance();
+        /*UsersList users = UsersList.getInstance();
         User user = new UserImpl();
         ((AbstractUser) user).setLogin("TestLogin");
         ((AbstractUser) user).setPassword("TestPassword");
@@ -25,6 +25,6 @@ public class App {
             LOGGER.error("Login failed!");
         }
         user.logoff();
-        users.printUsers();
+        users.printUsers();*/
     }
 }
