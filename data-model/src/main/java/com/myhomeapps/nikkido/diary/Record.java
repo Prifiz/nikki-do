@@ -1,8 +1,7 @@
-package com.myhomeapps.nikkido;
+package com.myhomeapps.nikkido.diary;
 
 import com.myhomeapps.nikkido.jaxb.DateAdapter;
 import com.myhomeapps.nikkido.knowledge.AbstractKnowledge;
-import com.myhomeapps.nikkido.knowledge.TheoreticalKnowledge;
 
 import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
